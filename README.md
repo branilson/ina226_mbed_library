@@ -11,7 +11,7 @@
 
 > Tested on ST STM32 evaluation boards Nucleo_L432KC and Nucleo_F746zg. 
 
-> 
+> This program is free software. Licensed under the terms of the GPL version 3 from the Free Software Foundation.
 
 **Use**
 
@@ -29,9 +29,8 @@ The ina226 class constructor receives an mbed I2C object, the device address, an
 </code></pre>
 
 3. Configure the device.
-The first thing needed before start measuring is to configure the behavior of the device. Four parameters in this method:
- - Averaging Mode
-   The options are:
+The first thing needed before start measuring is to configure the behavior of the device. This method requires four:
+ - Averaging Mode options:
 	- AVERAGES_1, for no averaging;
 	- AVERAGES_4, for 4 samples averaging;
 	- AVERAGES_16, for 16 samples averaging;
@@ -40,8 +39,8 @@ The first thing needed before start measuring is to configure the behavior of th
 	- AVERAGES_256, for 256 samples averaging;
 	- AVERAGES_512, for 512 samples averaging;
 	- AVERAGES_1024, for 1024 samples averaging.
- - Bus Voltage Conversion Time
-   The options are:
+
+ - Bus Voltage ConversionTime options:
 	- BUS_CONV_TIME_140US, for 140 microseconds voltage conversion time;
 	- BUS_CONV_TIME_204US, for 204 microseconds voltage conversion time;
 	- BUS_CONV_TIME_332US, for 332 microseconds voltage conversion time;
@@ -50,8 +49,8 @@ The first thing needed before start measuring is to configure the behavior of th
 	- BUS_CONV_TIME_2116US, for 2116 microseconds voltage conversion time;
 	- BUS_CONV_TIME_4156US, for 4156 microseconds voltage conversion time;
 	- BUS_CONV_TIME_8244US, for 8244 microseconds voltage conversion time.
- - Shunt Voltage Conversion Time
-   The options are:
+
+ - Shunt Voltage Conversion Time options:
 	- BUS_CONV_TIME_140US, for 140 microseconds voltage conversion time;
 	- BUS_CONV_TIME_204US, for 204 microseconds voltage conversion time;
 	- BUS_CONV_TIME_332US, for 332 microseconds voltage conversion time;
@@ -60,8 +59,8 @@ The first thing needed before start measuring is to configure the behavior of th
 	- BUS_CONV_TIME_2116US, for 2116 microseconds voltage conversion time;
 	- BUS_CONV_TIME_4156US, for 4156 microseconds voltage conversion time;
 	- BUS_CONV_TIME_8244US, for 8244 microseconds voltage conversion time.
- - Operating Mode
-   The options are:
+
+ - Operating Mode options:
 	- MODE_POWER_DOWN, 
 	- MODE_SHUNT_TRIG, 
 	- MODE_BUS_TRIG, 
@@ -78,7 +77,6 @@ With no parameters, the default settings loaded are AVERAGES_64, BUS_CONV_TIME_1
 
 <pre><code>ina.setConfig();
 </code></pre>
-
 
 4. Calibrate the device:
 This method do the calibration math using the supplied Shunt resistor value and maximun current expected.
@@ -103,14 +101,13 @@ With no parameters the object will adopt the default calibration parameters: rSh
 
 7. Start reading data:
 
-<pre><code>
-  ina.readManufacturerID(),
-  ina.readDieID(),
-  ina.readCalibration(),
-  ina.readShuntVoltage(),
-  ina.readBusVoltage(),
-  ina.readCurrent(),
-  ina.readPower());
+<pre><code>ina.readManufacturerID(),
+ina.readDieID(),
+ina.readCalibration(),
+ina.readShuntVoltage(),
+ina.readBusVoltage(),
+ina.readCurrent(),
+ina.readPower());
 </code></pre>
 
 Many other methods for reading and writing data are available in the class. See the header file for more details.
