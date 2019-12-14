@@ -11,7 +11,7 @@
 
 > Tested on ST STM32 evaluation boards Nucleo_L432KC and Nucleo_F746zg. 
 
-> This program is free software. Licensed under the terms of the GPL version 3 from the Free Software Foundation.
+> This program is free software. Licensed under the terms of the BSD License.
 
 **Use**
 
