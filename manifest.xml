@@ -4,9 +4,5 @@
     <maintainer>Branilson</maintainer>
     <license>BSD</license>
     <url>https://github.com/branilson/ina226_mbed_library</url>
-    <depend package="mccr_messaging"/>
     <depend package="platformio"/>
-    <depend package="vicor_bcm4414_bus_converter"/>
-    <depend package="bender_iso165c_imd"/>
-    <depend package="ina226_mbed_library"/>
 </package>
