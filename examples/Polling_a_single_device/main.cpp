@@ -20,7 +20,7 @@
  */
 
 #include "mbed.h"
-#include "ina226.hpp"
+#include "ina226_mbed_library/ina226.hpp"
 
 Serial pc(USBTX, USBRX);
 DigitalOut myled(LED1);
