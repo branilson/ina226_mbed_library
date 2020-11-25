@@ -19,7 +19,7 @@
  */
 
 
-#include "ina226.hpp"
+#include "ina226_mbed_library/ina226.hpp"
 
 ina226::ina226(I2C& i2c, uint8_t address, int frequency)
   : _i2c(i2c),
