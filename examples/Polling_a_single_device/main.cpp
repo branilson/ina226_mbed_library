@@ -55,10 +55,8 @@ int main() {
       pc.printf("Overcurrent detected\n");
     }
 
-    myled = 1;
-    wait(1);
-    myled = 0;
-    wait(1);
+    myled = !myled;
+    wait_us(1000000); // Wait one second.
     count++;
   }
 }
