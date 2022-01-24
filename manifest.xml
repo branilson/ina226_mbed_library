@@ -5,4 +5,5 @@
     <license>BSD</license>
     <url>https://github.com/branilson/ina226_mbed_library</url>
     <depend package="platformio"/>
+    <depend package="cmake"/>
 </package>

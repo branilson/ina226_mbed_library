@@ -13,7 +13,7 @@
 
 > This program is free software. Licensed under the terms of the BSD License.
 
-**Use**
+## Usage
 
 <a href="https://github.com/branilson"><img src="https://github.com/branilson/ina226_mbed_library/raw/master/img/Screenshot_ina226.png" title="Branilson Luiz" alt="BranlsonLuiz"></a>
 
@@ -113,3 +113,31 @@ ina.readPower());
 Many other methods for reading and writing data are available in the class. See the header file for more details.
 
 <a href="https://github.com/branilson"><img src="https://github.com/branilson/ina226_mbed_library/raw/master/img/ina226_circuit.jpg" title="Branilson Luiz" alt="BranlsonLuiz"></a>
+
+## CMake Advanced
+To use the library with Mbed OS 6 by [compiling it with CMake](https://os.mbed.com/docs/mbed-os/v6.15/build-tools/use.html#build-the-project-with-cmake-advanced), just add the command
+
+```cmake
+find_package(ina226_mbed_library REQUIRED CONFIG)
+```
+
+and the link with your application, for example
+
+```cmake
+...
+
+  add_executable(${APP_TARGET}
+    src/main.cpp
+  )
+
+  target_include_directories(${APP_TARGET}
+    PRIVATE  
+      include
+  )
+
+  target_link_libraries(${APP_TARGET}
+    PRIVATE
+      mbed-os
+      ina226_mbed_library::ina226_mbed_library
+  )
+```
